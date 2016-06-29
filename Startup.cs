@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Coffee.Models;
+using Coffee.Implementation;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +28,8 @@ namespace Coffee
         {
             // Add framework services.
             services.AddMvc();
+            services.AddSingleton<IAmTheCatalog, MainCatalog>();
+            services.AddSingleton<IProcessOrders, ProcessOrders>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

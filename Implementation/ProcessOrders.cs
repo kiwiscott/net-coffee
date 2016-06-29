@@ -5,7 +5,7 @@ using Coffee.Models;
 
 namespace Coffee.Implementation
 {
-    public class ProcessOrder : Models.IProcessOrders
+    public class ProcessOrders : Models.IProcessOrders
     {
         public List<Order> Orders = new List<Order>(); 
 
